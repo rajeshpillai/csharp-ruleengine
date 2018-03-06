@@ -11,7 +11,7 @@ namespace RulesEngine
 
             IRuleEngine<Registration> ruleEngine = RuleEngineFactory<Registration>.GetEngine();
 
-            register.UserName = "rajeshrajeshrajeeshrajeshrajesh";
+            register.UserName = "rajesh";
             register.Password = "test123";
             register.Email = "";
             register.EmailConfirm = "test";
