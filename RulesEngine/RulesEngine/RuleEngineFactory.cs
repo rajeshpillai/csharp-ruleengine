@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using RulesEngine.Rules;
-using System.Configuration;
+﻿using System.Configuration;
 using InterfaceDemo.RulesEngine;
-using RulesEngine.Model;
 
 namespace RulesEngine
 {
