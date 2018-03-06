@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using RulesEngine.Model;
-using RulesEngine.Rules;
 
 namespace RulesEngine
 {
@@ -14,12 +9,12 @@ namespace RulesEngine
     {
             Registration register = new Registration();
 
-            IRuleEngine<Registration> ruleEngine = RuleEngineFactory<Registration>.GetEngine(); 
+            IRuleEngine<Registration> ruleEngine = RuleEngineFactory<Registration>.GetEngine();
 
             register.UserName = "rajeshrajeshrajeeshrajeshrajesh";
             register.Password = "test123";
-            register.Email = "testcom";
-            register.EmailConfirm = "test@t.com";
+            register.Email = "";
+            register.EmailConfirm = "test";
 
             var results = ruleEngine.Validate(register);
 

@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using RulesEngine.Rules;
+using InterfaceDemo.RulesEngine;
 
 namespace RulesEngine.Model
 {
-    [RuleEngineType(RuleType = typeof(XmlRuleEngine<Registration>))]
+    [RuleEngineType(RuleType = typeof(XMLRuleEngine<Registration>))]
     public class Task
     {
         public int Id { get; set; }

@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using RulesEngine.Rules;
+using System.Configuration;
+using InterfaceDemo.RulesEngine;
+using RulesEngine.Model;
 
 namespace RulesEngine
 {
@@ -11,6 +14,22 @@ namespace RulesEngine
     {
         public static IRuleEngine<T> GetEngine()
         {
+            IRuleEngine<T> ruleEngine;
+
+            string configurationString = ConfigurationManager.AppSettings["RuleEngineType"];
+
+            if (configurationString == "XMLRuleEngine")
+            {
+                ruleEngine = new XMLRuleEngine<T>();
+            }
+            else
+            {
+                ruleEngine = new DefaultRuleEngine<T>();
+            }
+
+            return ruleEngine;
+
+            /*
             var t = typeof(T);
             var ruleEngineTypeAttr = t.GetCustomAttributes(typeof(RuleEngineTypeAttribute), true);
 
@@ -21,6 +40,7 @@ namespace RulesEngine
             }
 
             return new DefaultRuleEngine<T>();
+            */
         }
     }
 }
