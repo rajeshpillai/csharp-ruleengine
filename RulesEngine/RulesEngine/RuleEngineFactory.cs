@@ -18,7 +18,7 @@ namespace RulesEngine
 
             string configurationString = ConfigurationManager.AppSettings["RuleEngineType"];
 
-            if (configurationString == "XMLRuleEngine")
+            if (configurationString.ToLower() == "xmlruleengine")
             {
                 ruleEngine = new XMLRuleEngine<T>();
             }
