@@ -18,7 +18,7 @@ namespace RulesEngine
 
             register.UserName = "rajeshrajeshrajeeshrajeshrajesh";
             register.Password = "test123";
-            register.Email = "test@t.com";
+            register.Email = "testcom";
             register.EmailConfirm = "test@t.com";
 
             var results = ruleEngine.Validate(register);
