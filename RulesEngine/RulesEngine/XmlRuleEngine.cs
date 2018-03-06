@@ -48,13 +48,13 @@ namespace InterfaceDemo.RulesEngine
                         {
 
                             var validationType = item.Attribute("Type").Value;
-                            if (validationType == "MaxLenFieldAttribute")
+                            if (validationType == "MaxLenField")
                             {
                                 var errmsg = item.Attribute("ErrorMessage").Value;
                                 var max = item.Attribute("Max").Value;
                                 rulesAtts.Add(new MaxLenFieldAttribute(prop.Name, errmsg, Convert.ToInt32(max)));
                             }
-                            if (validationType == "RequiredFieldAttribute")
+                            if (validationType == "RequiredField")
                             {
                                 var errmsg = item.Attribute("ErrorMessage").Value;
                                 rulesAtts.Add(new RequiredFieldAttribute(prop.Name, errmsg));
