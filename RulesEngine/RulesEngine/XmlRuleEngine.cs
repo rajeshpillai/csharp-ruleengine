@@ -62,7 +62,6 @@ namespace InterfaceDemo.RulesEngine
                         }
                     }
                 }
-                // var rulesAtts = prop.GetCustomAttributes(typeof(ValidationAttribute), true);
                 var ruleItems = new List<ValidationAttribute>();
 
                 foreach (var rule in rulesAtts)
@@ -70,10 +69,8 @@ namespace InterfaceDemo.RulesEngine
                     var ruleAttribute = rule as ValidationAttribute;
                     ruleItems.Add(ruleAttribute);
                 }
-
                 Rules[prop.Name] = ruleItems;
             }
-
         }
     }
 }
